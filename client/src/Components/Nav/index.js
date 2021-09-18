@@ -5,7 +5,10 @@ function Nav() {
   return (
     <nav className="navbar navbar-dark bg-dark">
       <a className="navbar-brand" href="/">
-        React Recipes
+        Search
+      </a>
+      <a className="navbar-brand" href="/saved">
+        Saved
       </a>
     </nav>
   );
