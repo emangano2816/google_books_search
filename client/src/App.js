@@ -23,7 +23,11 @@ function App() {
     // When the form is submitted, prevent its default behavior, get books update the books state
     event.preventDefault();
     API.getBooks(bookSearch)
-      .then(res => setBooks(res.data))
+      .then( 
+        res =>{
+          console.log(res.data.items);
+          setBooks(res.data.items)
+        }) 
       .catch(err => console.log(err));
   };
 
@@ -68,12 +72,12 @@ function App() {
                 {books.map(book => {
                   return (
                     <BookListItem
-                      key={book.title}
-                      title={book.title}
-                      description={book.description}
-                      href={book.link}
-                      authors={book.authors}
-                      thumbnail={book.thumbnail}
+                      key={book.id}
+                      title={book.volumeInfo.title}
+                      description={book.volumeInfo.description}
+                      link={book.volumeInfo.infoLink}
+                      authors={book.volumeInfo.authors}
+                      thumbnail={book.volumeInfo.imageLinks.thumbnail}
                     />
                   );
                 })}

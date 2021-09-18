@@ -4,6 +4,6 @@ import axios from "axios";
 // It accepts a "query" or term to search the book api for
 export default {
   getBooks: function(query) {
-    return axios.get("https://googleapis.com/v1/volumes?", { params: { q: query } });
+    return axios.get("https://www.googleapis.com/books/v1/volumes?", { params: { q: query } });
   }
 };
