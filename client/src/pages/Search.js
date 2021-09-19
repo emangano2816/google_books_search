@@ -29,6 +29,12 @@ function Search() {
       .catch(err => console.log(err));
   };
 
+  const handleSaveBook = event => {
+    //When the button is clicked, prevent its default behavior
+    event.preventDefault();
+    console.log(event);
+  }
+
   return (
     <div>
       <Container>
@@ -60,7 +66,7 @@ function Search() {
           </Col>
         </Row>
         <Row>
-          <Col size="xs-12">
+          <Col size="xs-10">
             {!books.length ? (
               <h1 className="text-center">No Books to Display</h1>
             ) : (
@@ -75,7 +81,8 @@ function Search() {
                       authors={book.volumeInfo.authors}
                       thumbnail={!book.volumeInfo.imageLinks.thumbnail ? (
                         "http://books.google.com/books/content?id=llmymwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-                      ) : (book.volumeInfo.imageLinks.thumbnail)}
+                      ) : (book.volumeInfo.imageLinks.thumbnail)} 
+                      onclick={handleSaveBook}
                     />
                   );
                 })}

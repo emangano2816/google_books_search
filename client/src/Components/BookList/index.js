@@ -16,7 +16,8 @@ export function BookListItem({
   title,
   description,
   authors,
-  link
+  link,
+  onclick
 }) {
   return (
     <li className="list-group-item">
@@ -35,6 +36,7 @@ export function BookListItem({
           </Col>
           <Col size="xs-1 sm-1">
             <Button
+              onClick={onclick}
               type="success"
               className="input-lg">
               Save Book

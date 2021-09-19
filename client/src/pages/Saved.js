@@ -36,7 +36,7 @@ function loadBooks() {
                             {savedBooks.map(book => {
                                 return ( 
                                 <BookListItem
-                                    key={book.id}
+                                    key={book._id}
                                     title={book.title}
                                     description={book.description}
                                     link={book.link}
