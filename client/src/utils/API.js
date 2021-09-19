@@ -11,5 +11,10 @@ export default {
   //Gets saved books from mongoDB
   getSavedBooks: function() {
     return axios.get("/api/books");
+  },
+
+  //Save a book to the database
+  saveBook: function(bookData) {
+    return axios.post("/api/books", bookData);
   }
 };
