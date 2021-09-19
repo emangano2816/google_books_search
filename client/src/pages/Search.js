@@ -73,7 +73,9 @@ function Search() {
                       description={book.volumeInfo.description}
                       link={book.volumeInfo.infoLink}
                       authors={book.volumeInfo.authors}
-                      thumbnail={book.volumeInfo.imageLinks.thumbnail}
+                      thumbnail={!book.volumeInfo.imageLinks.thumbnail ? (
+                        "http://books.google.com/books/content?id=llmymwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+                      ) : (book.volumeInfo.imageLinks.thumbnail)}
                     />
                   );
                 })}

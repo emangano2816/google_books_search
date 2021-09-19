@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import API from "../utils/API";
 import { BookList, BookListItem } from "../components/BookList";
 import { Container, Row, Col } from "../components/Grid";
 
@@ -28,7 +29,7 @@ function loadBooks() {
         <Container>
             <Row>
                 <Col size="md-12">
-                    {!books.length ? (
+                    {!savedBooks.length ? (
                         <h1 className="text-center">No Books to Display</h1>
                     ) : (
                         <BookList>

@@ -1,5 +1,6 @@
 import React from "react";
 import Thumbnail from "../Thumbnail";
+import Button from "../Button";
 import { Container, Row, Col } from "../Grid";
 
 // Exporting both BookList and BookListItem from this file
@@ -24,13 +25,20 @@ export function BookListItem({
           <Col size="xs-4 sm-2">
             <Thumbnail src={thumbnail || "https://placehold.it/300x300"} />
           </Col>
-          <Col size="xs-8 sm-9">
+          <Col size="xs-7 sm-8">
             <h3>{title}</h3>
             <p>Authors: {authors} </p>
             <p>Description: {description}</p>
             <a rel="noreferrer noopener" target="_blank" href={link}>
               Go to book!
             </a>
+          </Col>
+          <Col size="xs-1 sm-1">
+            <Button
+              type="success"
+              className="input-lg">
+              Save Book
+            </Button>
           </Col>
         </Row>
       </Container>
