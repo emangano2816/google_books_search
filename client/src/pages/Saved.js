@@ -22,12 +22,14 @@ function Saved() {
         .catch(err => console.log(err));
     };
 
-  //Remove book from saved book list
+  //Remove book from saved book list; then reload saved books to page
   const handleRemoveBook = event => {
       event.preventDefault();
 
-      console.log('test');
-  }
+      API.removeBook(event.target.id)
+        .then(res => loadBooks())
+        .catch(err => console.log(err));
+    }
 
 
   return (
