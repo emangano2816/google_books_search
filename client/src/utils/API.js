@@ -13,8 +13,13 @@ export default {
     return axios.get("/api/books");
   },
 
-  //Save a book to the database
+  //Save book to database
   saveBook: function(bookData) {
     return axios.post("/api/books", bookData);
+  },
+
+  //Remove book from database
+  removeBook: function(id) {
+    return axios.delete("/api/books/" + id);
   }
 };
