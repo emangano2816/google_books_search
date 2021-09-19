@@ -40,7 +40,7 @@ function Saved() {
                     {!savedBooks.length ? (
                         <h1 className="text-center">No Books to Display</h1>
                     ) : (
-                        <BookList>
+                        <BookList type='Saved Books:'>
                             {savedBooks.map(book => {
                                 return ( 
                                 <BookListItem
@@ -52,7 +52,7 @@ function Saved() {
                                     thumbnail={book.image}
                                     index={book._id}
                                     onclick={handleRemoveBook}
-                                    btnName='Remove Book'
+                                    btnName='Remove'
                                 />
                                 );
                             })}

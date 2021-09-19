@@ -65,6 +65,7 @@ function Search() {
                   <Col size="xs-3 sm-2">
                     <Button
                       onClick={handleFormSubmit}
+                      size='lg'
                       type="success"
                       className="input-lg"
                     >
@@ -81,7 +82,7 @@ function Search() {
             {!books.length ? (
               <h1 className="text-center">No Books to Display</h1>
             ) : (
-              <BookList>
+              <BookList type={'Search Results:'}>
                 {books.map((book, index) => {
                   return (
                     <BookListItem
@@ -96,7 +97,6 @@ function Search() {
                       index={index}
                       onclick={handleSaveBook}
                       btnName='Save Book'
-
                     />
                   );
                 })}
