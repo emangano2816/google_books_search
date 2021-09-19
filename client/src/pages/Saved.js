@@ -13,15 +13,21 @@ function Saved() {
     loadBooks()
   }, [])
 
-// Loads all saved books and sets them to books
-function loadBooks() {
+  // Loads all saved books and sets them to books
+  function loadBooks() {
     API.getSavedBooks()
         .then(res => 
         setSavedBooks(res.data)
         )
         .catch(err => console.log(err));
     };
-    
+
+  //Remove book from saved book list
+  const handleRemoveBook = event => {
+      event.preventDefault();
+
+      console.log('test');
+  }
 
 
   return (
@@ -42,6 +48,9 @@ function loadBooks() {
                                     link={book.link}
                                     authors={book.authors}
                                     thumbnail={book.image}
+                                    index={book._id}
+                                    onclick={handleRemoveBook}
+                                    btnName='Remove Book'
                                 />
                                 );
                             })}

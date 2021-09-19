@@ -95,6 +95,8 @@ function Search() {
                       ) : (book.volumeInfo.imageLinks.thumbnail)} 
                       index={index}
                       onclick={handleSaveBook}
+                      btnName='Save Book'
+
                     />
                   );
                 })}
