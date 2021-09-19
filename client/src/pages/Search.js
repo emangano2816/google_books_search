@@ -71,7 +71,7 @@ function Search() {
               <h1 className="text-center">No Books to Display</h1>
             ) : (
               <BookList>
-                {books.map(book => {
+                {books.map((book, index) => {
                   return (
                     <BookListItem
                       key={book.id}
@@ -82,6 +82,7 @@ function Search() {
                       thumbnail={!book.volumeInfo.imageLinks.thumbnail ? (
                         "http://books.google.com/books/content?id=llmymwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
                       ) : (book.volumeInfo.imageLinks.thumbnail)} 
+                      index={index}
                       onclick={handleSaveBook}
                     />
                   );

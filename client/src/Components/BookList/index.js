@@ -17,6 +17,7 @@ export function BookListItem({
   description,
   authors,
   link,
+  index,
   onclick
 }) {
   return (
@@ -36,6 +37,7 @@ export function BookListItem({
           </Col>
           <Col size="xs-1 sm-1">
             <Button
+              id={index}
               onClick={onclick}
               type="success"
               className="input-lg">
