@@ -20,6 +20,7 @@ The Google Books Search application allows a user to search the Google Books API
     
 ## Application Demo
 
+![google_books_search_demo](https://user-images.githubusercontent.com/79860046/134040426-9a68c06e-5c8c-4614-9fd7-6018b362709b.gif)
 
 ## Tecnhologies Used
 1. React
