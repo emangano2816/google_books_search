@@ -1,4 +1,4 @@
-# React Employee Directory
+# React Google Books Search
 
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
