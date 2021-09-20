@@ -91,14 +91,14 @@ function Search() {
                       description={book.volumeInfo.description}
                       link={book.volumeInfo.infoLink}
                       authors={book.volumeInfo.authors}
-                      thumbnail={!book.volumeInfo.imageLinks.thumbnail ? (
+                      thumbnail={!book.volumeInfo.imageLinks ? (
                         "http://books.google.com/books/content?id=llmymwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
                       ) : (book.volumeInfo.imageLinks.thumbnail)} 
                       index={index}
                       onclick={handleSaveBook}
                       btnName='Save Book'
                     />
-                  );
+                  )
                 })}
               </BookList>
             )}
@@ -106,7 +106,7 @@ function Search() {
         </Row>
       </Container>
     </div>
-  );
+  )
 }
 
 export default Search;

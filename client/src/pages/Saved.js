@@ -62,7 +62,7 @@ function Saved() {
             </Row>
       </Container>
     </div>
-  );
+  )
 }
 
 export default Saved;
