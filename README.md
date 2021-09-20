@@ -1,29 +1,37 @@
-# Create React Express App
+# React Employee Directory
 
-## About This Boilerplate
+![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+## Link(s)
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+* [GitHub Repository](https://github.com/emangano2816/google_books_search)
+* [Application](https://secret-taiga-38025.herokuapp.com/)
 
-## Starting the app locally
+## User Story
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
-
-```
-npm install
-```
-
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
-
-```
-npm start
+```md
+As a user, 
+I WANT to be able to search the Google Books API and save books of interest 
+SO THAT I have quick access to their information.
 ```
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+## Summary of Application Functionality
+The Google Books Search application allows a user to search the Google Books API.  Upon providing search criteria and hitting 'Search' the application returns a list of books meeting the specified criteria.  The user is then able to peruse the list and hit 'Save Book' to add the book to their saved list.  A user is able to toggle between the search and saved pages by hitting the links in the navigation bar.  Books are able to be removed from the saved page by hitting 'Remove'.
+    
+## Application Demo
 
-## Deployment (Heroku)
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+## Tecnhologies Used
+1. React
+2. MongoDB, Atlas: MongoDB
+3. ExpressJS, NodeJS
+4. Heroku 
+
+## Installation
+
+No installation required.
+
+## License
+
+This application is covered under the MIT license.
+
